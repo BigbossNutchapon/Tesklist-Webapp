@@ -1,0 +1,527 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+
+*{
+    font-family: 'Poppins';
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+}
+
+*::-webkit-scrollbar{
+    height: .5rem;
+    width: 1rem;
+}
+ 
+*::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+ 
+*::-webkit-scrollbar-thumb{
+    background-color: B0B0B0;
+}
+ 
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    background-color: #FFFDF8;
+}
+ 
+body{
+    overflow: hidden;
+    transition: .2s linear !important;
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    height: 100vh;
+}
+
+.container{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 150px 1fr;
+}
+
+
+/* sidebar */
+
+.sidebar {
+    width: 150px;
+    height: 100%;
+    height: 100vh;
+    background-color: #70A5FF;
+    text-align: center; 
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+}
+
+.logo img{
+    width: 100px;
+    height: 100px;
+    margin-top: 2rem;
+}
+
+
+.sidebar h1 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-top: -1rem;
+    color: #fff;
+}
+
+.sidebar .menu a{
+    display: block;
+    font-size: 1.5rem;
+    color: #fff;
+    padding: 2rem;
+    margin: 0 2rem 2rem 2rem;
+    font-size: 4rem;
+}
+
+.menu a:hover{
+    background-color: #4285F4;
+    border-radius: 5px;
+}
+
+.menu a.active{
+    background-color: #256ade;
+    border-radius: 5px;
+}
+
+/* header */
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem 5rem 0rem 5rem;
+}
+
+.header img {
+    display: none;
+}
+
+.header h1{
+    font-size: 52px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    color: #005fff;
+}
+
+hr{
+    width: 95%;
+    border: 1px solid #95B8F3;
+}
+
+.openMenu{
+    display: none;
+}
+
+.nav-list{
+    display: none;
+}
+
+
+/* content */
+
+.header h1{
+    text-transform: none !important;
+}
+
+#overview {
+    display: none;
+}
+
+.sub-heading {
+    padding-left: 5rem;
+    margin-top: 0;
+    font-size: 3rem;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6.25rem;
+}
+
+.circles-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 16.688rem; 
+}
+
+.circles-container .circle {
+    display: flex;
+    justify-content: center;
+}
+
+.circles-container h1 {
+    font-size: 2rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+
+/* graph */
+
+.doughnut {
+    width: 1000px;
+    position: relative;
+    text-align: center;
+}
+
+.doughnut h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.doughnut h2 {
+    color: white;
+    font-size: 1.75rem;
+    font-weight: 400;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.doughnut #tasks {
+    top: 30%;
+    left: 41%;
+}
+
+.doughnut #finished {
+    bottom: 10%;
+    right: 30%;
+}
+
+
+/* responsive */
+
+
+
+
+@media (max-width: 1023px) {
+    .sidebar{
+        display: none;
+    }
+
+    .container{
+        display: block;
+    }
+
+    .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: auto;
+        margin-bottom: 1rem;
+    }
+
+    .header img{
+        display: block;
+        margin: auto 0;
+        width: 100px;
+        height: 100px;
+    }
+
+    .header h1{
+        font-size: 54px;
+        font-weight: bold;
+    }
+
+    .openMenu{
+        display: block;
+        cursor: pointer;
+    }
+
+    .openMenu i{
+        font-size: 5rem;
+    }
+
+    .openMenu.open i{
+        width: 43.75px;
+        height: 50px;
+    }
+
+    .nav-list{
+        display: none;
+        position: absolute;
+        width: 100px;
+        height: 380px;
+        margin-top: 0rem;
+        margin-right: 5rem;
+        right: 0;
+        background: #79a7f7;
+        border-radius: 5px;
+        /* display: flex; */
+        align-items: center;
+        flex-direction: column;
+        padding: 30px 20px;
+        transition: all .55s ease;
+    }
+
+    .nav-list li{
+        list-style: none;
+    }
+    .nav-list a{
+        margin-left: 0;
+        display: block;
+        margin: 0 0 4rem 0;
+    }
+
+    .nav-list a i{
+        font-size: 5rem;
+        color: #fff;
+    }
+
+    .nav-list a:hover{
+        color: #4285f4;
+    }
+
+    .nav-list.open{
+        display: flex;
+        margin-top: 0rem;
+        margin-right: 5rem;
+        right: 0;
+        opacity: 0.9;
+    }
+
+    #overview {
+        display: block !important;
+        text-transform: uppercase !important;
+        font-size: 54px;
+        font-weight: bold;
+    }
+
+    .sub-heading, .header h1 {
+        display: none;
+    }
+
+    section {
+        margin-top: 4rem;
+    }
+}
+
+
+@media (max-width: 830px) {
+    .circles-container {
+        grid-column-gap: 8.75rem;
+    }
+}
+
+@media (max-width: 650px) {
+    .circles-container {
+        grid-column-gap: 4rem;
+    }
+
+    #overview {
+        font-size: 42px;
+    }
+}
+
+@media (max-width: 570px) {
+    .doughnut {
+        width: 200vw;
+    }
+
+    .doughnut h2 {
+        font-size: 3vw;
+    }
+
+    #overview {
+        font-size: 6vw;
+    }
+
+}
+
+@media (max-width: 500px) {
+    .circles-container {
+        grid-column-gap: 2rem; 
+    }
+
+    .circles-container svg {
+        width: 100px;
+        height: 100px;    
+    }
+}
+
+@media (max-width: 410px) {
+    .doughnut #tasks {
+        left: 85vw;
+    }
+
+    .doughnut #finished {
+        right: 32%;
+    }
+}
+
+/* navbar responsive */
+
+@media (max-width: 745px) {
+    .header{
+        margin-bottom: 0;
+    }
+    .task{
+        height: 50px;
+    }
+    .head-task h2{
+        font-size: 20px;
+    }
+
+    .duedate p{
+        font-size: 18px;
+    }
+    .btn-edit i{
+        font-size: 1.5rem;
+    }
+    .btn-edit p{
+        font-size: 18px;
+    }
+
+
+}
+
+@media (max-width: 680px) {
+    /* header menu */
+    .header img{
+        width: 80px;
+        height: 80px;
+    }
+
+    .header h1{
+        font-size: 30px;
+    }
+
+
+    .openMenu i{
+        font-size: 3rem;
+    }
+    .nav-list{
+        width: 80px;
+        height: 240px;
+        padding: 20px 10px;
+    }
+
+    .nav-list a{
+        margin: 0 0 2.5rem 0;
+    }
+
+    .nav-list a i{
+        font-size: 3rem;
+    }
+
+    .openMenu.open i {
+        width: 26.25px;
+        height: 30px;
+    }
+
+}
+
+@media (max-width: 515px) {
+    /* header menu */
+    .header{
+        padding-top: 5px;
+    }
+    .header img{
+        width: 50px;
+        height: 50px;
+    }
+
+    .header h1{
+        font-size: 24px;
+    }
+
+    .openMenu i{
+        font-size: 2rem;
+    }
+    .openMenu.open i{
+        width: 17.5px;
+        height: 20px;
+    }
+    .nav-list{
+        width: 50px;
+        height: 150px;
+        padding: 20px 10px;
+
+    }
+    .nav-list a{
+        margin: 0 0 1.5rem 0;
+    }
+    .nav-list a i{
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 414px) {
+    .header{
+        padding: 0 2rem;
+    }
+    .openMenu{
+        margin-top: 1rem;
+    }
+    .nav-list.open{
+        margin-right: 2rem;
+    }
+
+}
+
+@media (max-width: 340px){
+    /* header menu */
+    .header img{
+        width: 30px;
+        height: 30px;
+    }
+
+    .header h1{
+        font-size: 18px;
+    }
+
+    .openMenu i{
+        font-size: 1.5rem;
+    }
+    .openMenu.open i{
+        width: 13.13px;
+        height: 18px;
+    }
+}
+
+@media (max-width: 270px){
+    /* header menu */
+    .header img{
+        width: 30px;
+        height: 30px;
+    }
+
+    .header h1{
+        font-size: 16px;
+    }
+
+    .openMenu i{
+        font-size: 1.2rem;
+    }
+    .openMenu.open i{
+        width: 10.5px;
+        height: 12px;
+    }
+
+    .nav-list{
+        width: 30px;
+        height: 100px;
+        padding: 5px 5px;
+
+    }
+    .nav-list a{
+        margin: 0 0 1rem 0;
+    }
+    .nav-list a i{
+        font-size: 1rem;
+    }
+}

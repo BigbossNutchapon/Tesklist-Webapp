@@ -1,0 +1,125 @@
+*{
+    font-family: 'Poppins';
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+}
+
+*::-webkit-scrollbar{
+    height: .5rem;
+    width: 1rem;
+}
+ 
+*::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+ 
+*::-webkit-scrollbar-thumb{
+    background-color: B0B0B0;
+}
+ 
+html{
+    scroll-behavior: smooth;
+    background-color: #fffcf3;
+}
+
+.form-box {
+    width: 545px;
+    height: 522px;
+    position: relative;
+    margin: auto auto;
+    background: #fff;
+    border-radius: 30px;
+    margin: 17rem auto;
+    overflow: hidden;
+}
+
+.button-box {
+    width: 545;
+    height: 81.81px;
+    margin: 35px auto;
+    margin-top: 0;
+    position: relative;
+    background-color: #95B8F3;
+    border-radius: 30px 30px 0 0;
+}
+
+.toggle-btn {
+    padding: 15px 70px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+    font-size: 36px;
+    color: #000;
+}
+
+#btn-login {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 272.5px;
+    height: 100%;
+    background: linear-gradient(to right, #4285F4, #4285F4);
+    border-radius: 30px 0 0 0;
+    transition: .5s;
+}
+
+#btn-register {
+    top: 0;
+    left: 53.5rem;
+    position: absolute;
+    width: 272.5px;
+    height: 100%;
+    background: linear-gradient(to right, #4285F4, #4285F4);
+    border-radius: 0 30px 0 0;
+    transition: .5s;
+}
+
+.input-group {
+    width: 280px;
+    position: absolute;
+    display: block;
+    margin-left: 2rem;
+    transition: .5s;
+    font-size: 24px;
+}
+
+.input-field {
+    width: 480px;
+    padding: 10px 0;
+    border-left: 0;
+    border: 1.5px solid #000;
+    border-radius: 30px;
+    outline: none;
+    background: transparent;
+    padding-left: 10px;
+    margin-bottom: 1rem;
+}
+
+.submit-btn {
+    width: 190.75px;
+    height: 60px;
+    display: block;
+    cursor: pointer;
+    background: linear-gradient(to right, #4285F4, #4285F4);
+    outline: none;
+    border-radius: 20px;
+    margin-left: 9rem;
+    margin-top: 1rem;
+    font-size: 24px;
+    color: #fff;
+}
+
+.submit-btn:hover {
+    background: #000;
+}
+
+#login {
+    left: 0px;
+}
+
+#register {
+    left: 600px;
+}

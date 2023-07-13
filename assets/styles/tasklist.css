@@ -1,0 +1,1160 @@
+
+.btn-content{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 0rem 5rem;
+}
+
+.btn-content .btn{
+    background-color: #70A5FF;
+    color: #fff;
+    padding: 1rem 2rem;
+    margin-right: 1rem;
+    border-radius: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: .2s linear;
+}
+
+.btn-content .active, .btn-content .btn:hover{
+    /* background-color: #0354d5; */
+    box-shadow: #042153;
+    background-color: #256ade;
+}
+
+.card-task{
+    display: block;
+    margin: 1rem 5rem 0 5rem;
+    border-radius: 5px;
+}
+.task {
+    display: flex;
+    height: 60px;
+    justify-content: space-between;
+}
+
+.card-task.late{
+    background-color: #FF7F50;
+}
+
+.card-task.in-progress{
+    background-color: #95B8F3;
+}
+
+.card-task.done{
+    background-color: lightgreen;
+}
+
+.head-task{
+    display: flex;
+}
+
+.head-task i{
+    font-size: 2.5rem;
+    color: #fff;
+    margin: auto 2rem ;
+}
+
+
+
+.head-task input[type="checkbox"]{
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    height: 30px;
+    width: 30px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto 2rem;
+}
+
+.task.late.head-task input[type="checkbox"]{
+    background-color: #FF7F50;
+}
+
+.task.in-progress.head-task input[type="checkbox"]{
+    background-color: #95B8F3;
+}
+
+.task.done.head-task input[type="checkbox"]{
+    background-color: lightgreen;
+}
+
+.head-task input[type="checkbox"]:after{
+    font-family: "Font Awesome 5 Free";
+    content: "\f00c";
+    font-weight: 900;
+    font-size: 25px;
+    color: #fff;
+    display: none;
+}
+
+
+.task.late.head-task input[type="checkbox"]:hover,.task.late.head-task input[type="checkbox"]:checked{
+    background-color: #fb6b36;
+}
+
+.task.in-progress.head-task input[type="checkbox"]:hover,.task.in-progress.head-task input[type="checkbox"]:checked{
+    background-color: #4285F4;
+}
+
+.task.done.head-task input[type="checkbox"]:hover,.task.done.head-task input[type="checkbox"]:checked{
+    background-color: #66f066;
+}
+
+.head-task input[type="checkbox"]:checked:after{
+    display: block;
+}
+
+.head-task h2{
+    font-size: 24px;
+    color: #fff;
+    margin: auto 0;
+    cursor: pointer;
+}
+
+.tail-task{
+    display: flex;
+}
+
+.tail-task .duedate{
+    display: flex;
+    align-items: center;
+    margin: auto 2rem;
+}
+.btn-edit:hover{
+    background-color: #4285F4;
+    border-radius: 5px;
+}
+.btn-edit.late,.btn-edit.late:hover{
+    background-color: #FF7F50;
+}
+.btn-edit.in-progress,.btn-edit.in-progress:hover{
+    background-color: #95B8F3;
+}
+.btn-edit.done,.btn-edit.done:hover{
+    background-color: lightgreen;
+}
+
+.duedate i{
+    font-size: 2.5rem;
+    color: #fff;
+    margin: auto 1rem ;
+}
+
+.duedate p{
+    font-size: 24px;
+    font-weight: regular;
+    color: #fff;
+    margin: auto 0;
+}
+
+.tail-task .btn-edit{
+    display: inline-flex;
+    align-items: center;
+    margin: auto 2rem;
+    cursor: pointer;
+}
+
+.btn-edit i{
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+.btn-edit p{
+    font-size: 24px;
+    font-weight: regular;
+    color: #fff;
+    margin: auto 0;
+    text-decoration: underline;
+}
+
+.showdetail{
+    display: none;
+    height: 85px;
+    border-radius: 0 0 5px 5px;
+    transition: .2s linear;
+}
+
+.showdetail.late{
+    background-color: #ffaa8c;
+}
+
+.showdetail.in-progress{
+    background-color: #c2d2ee;
+}
+
+.showdetail.done{
+    background-color: #c8f8c8;
+}
+
+.showdetail h3{
+    font-size: 15px;
+    font-weight: regular;
+    color: black;
+    margin: auto 1rem;
+}
+
+.showdetail p{
+    font-size: 15px;
+    font-weight: regular;
+    color: black;
+    text-indent: 50px;
+    margin: auto 3rem;
+}
+
+.btn-incontent{
+    display: none;
+}
+
+.openMenu{
+    display: none;
+}
+
+.btn-fnTasklist{
+    display: none;
+}
+
+.nav-list{
+    display: none;
+}
+
+
+/* popup element */
+.popup-btn .btn {
+    background-color: #95B8F3;
+    color: #fff;
+    padding: 1rem 2rem;
+    margin-right: 1rem;
+    border-radius: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: .2s linear;
+}
+
+.form-element textarea {
+    min-height: 200px;
+}
+
+.popup {
+    position: absolute;
+    top: -150%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.25);
+    width: 40%;
+    height: auto;
+    padding: 1.25rem 1.875rem;
+    background-color: #fff;
+    box-shadow:0px 1px 5px 0px rgb(0, 0, 0.2);
+    border-radius: 15px;
+    transition: top 0ms ease-in-out 200ms,
+                opacity 200ms ease-in-out 0ms,
+                transform 20ms ease-in-out 0ms;
+}
+
+.popup-btn .btn {
+    margin-right: 0 !important;
+}
+
+.popup.active {
+    top: 50%;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    transition: top 0ms ease-in-out 0ms,
+                opacity 200ms ease-in-out 0ms,
+                transform 20ms ease-in-out 0ms;
+}
+
+.popup .form .form-element{
+    margin: 15px 0px;
+}
+
+.popup .form .form-element label {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.popup .form .form-element input[type='text'], 
+.popup .form .form-element textarea {
+    font-size: 24px;
+    font-weight: 100;
+    display: block;
+    margin-top: 5px;
+    padding: 10px;
+    width: 100%;
+    outline: none;
+    border: 1px solid #aaa;
+    border-radius: 10px;
+}
+
+.popup-btn {
+    display: flex;
+    justify-content: space-around;
+}
+
+.popup-btn #confirm-delete {
+    margin: 0;
+    background-color: #EA4335;
+}
+
+.popup-btn #confirm-done {
+    margin: 0;
+    padding: 0 46.4455px 0 46.4455px;
+    background-color: #9CCD62;
+}
+
+.popup .alert-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.popup .alert-box i {
+    margin-top: 2rem;
+    font-size: 6.25rem;
+}
+
+.popup .alert-box .alert-text {
+    margin: 0.938rem 0 2rem 0;
+}
+
+.popup .alert-box .alert-text p {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.popup .alert-box h1 {
+    margin: 0.938rem 0 0 0;
+    font-size: 3rem;
+}
+
+
+
+@media (max-width: 1350px) {
+    .head-task{
+        width: 50%;
+    }
+
+    .showdetail p{
+        font-size: 14px;
+    }
+
+}
+
+@media (max-width: 1130px) {
+    .head-task{
+        width: 40%;
+    }
+
+    /* popup element */
+    .add-popup, .edit-popup {
+        width: 80%;
+    }    
+}
+
+@media (max-width: 1023px) {
+    .btn-content{
+        display: none;
+    }
+
+    .btn-tasklist{
+        display: none;
+    }
+
+    .sidebar{
+        display: none;
+    }
+
+    .container{
+        display: block;
+    }
+
+    .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: auto;
+        margin-bottom: 1rem;
+    }
+
+    .header img{
+        display: block;
+        margin: auto 0;
+        width: 100px;
+        height: 100px;
+    }
+
+    .header h1{
+        font-size: 54px;
+        font-weight: bold;
+    }
+
+    .tasklist{
+        display: flex;
+    }
+
+    .btn-incontent{
+        display: block;
+    }
+    
+    .openMenu{
+        display: block;
+        cursor: pointer;
+    }
+
+    .openMenu i{
+        font-size: 5rem;
+    }
+
+    .openMenu .fa-times{
+        width: 43.75px;
+        height: 50px;
+    }
+
+    .nav-list{
+        display: none;
+        position: absolute;
+        width: 100px;
+        height: 380px;
+        margin-top: 0rem;
+        margin-right: 5rem;
+        right: 0;
+        background: #79a7f7;
+        border-radius: 5px;
+        /* display: flex; */
+        align-items: center;
+        flex-direction: column;
+        padding: 30px 20px;
+        transition: all .55s ease;
+    }
+
+    .nav-list li{
+        list-style: none;
+    }
+    .nav-list a{
+        margin-left: 0;
+        display: block;
+        margin: 0 0 4rem 0;
+    }
+
+    .nav-list a i{
+        font-size: 5rem;
+        color: #fff;
+    }
+
+    .nav-list a:hover{
+        color: #4285f4;
+    }
+
+    .nav-list.open{
+        display: flex;
+        margin-top: 0rem;
+        margin-right: 5rem;
+        right: 0;
+        opacity: 0.9;
+    }
+    
+    .btn-incontent{
+        margin: auto 0 auto 5rem;
+    }
+    .dropbtn {
+        background-color: #4285F4;
+        color: white;
+        width: 170px;
+        height: 60px;
+        font-size: 24px;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+    }
+      
+    .dropbtn:hover, .dropbtn:focus {
+        background-color: #4285F4;
+    }
+      
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+      
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #95B8F3;
+        min-width: 160px;
+        overflow: auto;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+      
+    .dropdown-content button{
+        color: #fff;
+        background-attachment: unset;
+        min-width: 160px;
+        background-color: #95B8F3;
+        padding: 12px 16px;
+        font-size: 20px;
+        text-decoration: none;
+        display: block;
+    }
+      
+    .dropdown button:hover {background-color: #ddd;}
+      
+    .show {display: block;}
+    
+    .showdetail h3{
+        font-size: 14px;
+    }
+
+    .btn-fnTasklist .btn{
+        background-color: #95B8F3;
+        color: #fff;
+        font-size: 20px;
+        font-weight: bold;
+        border: none;
+        border-radius: 5px;
+        padding: 15px 20px;
+        margin-left: 1rem;
+        cursor: pointer;
+    }
+
+    .btn-fnTasklist .btn i{
+        font-size: 20px;
+        margin-right: 10px;
+    }
+    
+    .btn-fnTasklist .btn:hover{
+        background-color: #4285F4;
+    }
+    
+    .btn-fnTasklist{
+        display: block;
+    }
+    
+}
+
+@media (max-width: 850px) {
+    .dropdown-content {
+        min-width: 140px;
+    }
+      
+    .dropdown-content button{
+        min-width: 140px;
+        background-color: #95B8F3;
+        padding: 12px 16px;
+        font-size: 18px;
+    }
+    .head-task{
+        width: 35%;
+    }
+    .head-task input[type="checkbox"]{
+        height: 25px;
+        width: 25px;
+        border: 2px solid #fff;
+        border-radius: 5px;
+        margin: auto 2rem;
+    }
+
+    .head-task input[type="checkbox"]:after{
+        font-size: 20px;
+    }
+    .head-task h2{
+        font-size: 22px;
+    }
+
+    .duedate i{
+        font-size: 2rem;
+    }
+    .duedate p{
+        font-size: 20px;
+    }
+    .btn-edit i{
+        font-size: 2rem;
+    }
+    .btn-edit p{
+        font-size: 20px;
+    }
+    .showdetail{
+        height: 85px;
+    }
+    .showdetail h3{
+        font-size: 14px;
+    }
+    
+    .showdetail p{
+        font-size: 14px;
+    }
+    
+
+    /* popup element */
+    .popup {
+        width: 90%;
+    }
+
+    .form-element textarea {
+        min-height: 150px;
+    }
+
+    .popup .form .form-element input[type='text'], 
+    .popup .form .form-element textarea,
+    .popup .form .form-element label
+    {
+        font-size: 4vw;
+    }
+    
+    .popup-btn .btn {
+        padding: 1vw 2vw;
+        margin-right: 0.5vw;
+        font-size: 4vw;
+    }
+
+    .popup .alert-box i {
+        font-size: 15vw;
+    }    
+
+    .popup-btn #confirm-done {
+        padding: 0 5vw 0 5vw;
+    }
+    
+    .popup .alert-box .alert-text p {
+        font-size: 3vw;
+    }
+    
+    .popup .alert-box h1 {
+        font-size: 5vw;
+    }
+}
+
+@media (max-width: 745px) {
+    .header{
+        margin-bottom: 0;
+    }
+    .task{
+        height: 50px;
+    }
+    .head-task h2{
+        font-size: 20px;
+    }
+
+    .duedate p{
+        font-size: 18px;
+    }
+    .btn-edit i{
+        font-size: 1.5rem;
+    }
+    .btn-edit p{
+        font-size: 18px;
+    }
+    .showdetail{
+        height: 70px;
+    }
+    .showdetail h3{
+        font-size: 11px;
+    }
+    
+    .showdetail p{
+        font-size: 11px;
+    }
+
+}
+
+@media (max-width: 680px) {
+    /* header menu */
+    .header img{
+        width: 80px;
+        height: 80px;
+    }
+
+    .header h1{
+        font-size: 30px;
+    }
+
+    .openMenu i{
+        font-size: 3rem;
+    }
+    .nav-list{
+        width: 80px;
+        height: 240px;
+        padding: 20px 10px;
+    }
+
+    .nav-list a{
+        margin: 0 0 2.5rem 0;
+    }
+
+    .nav-list a i{
+        font-size: 3rem;
+    }
+
+    .openMenu.open i {
+        width: 26.25px;
+        height: 30px;
+    }
+    /*  */
+    .dropdown-content {
+        min-width: 140px;
+    }
+      
+    .dropdown-content button{
+        min-width: 140px;
+        padding: 12px 16px;
+    }
+    
+    .btn-incontent button{
+        width: 130px;
+        height: 50px;
+        font-size: 20px;
+    }
+
+    .btn-fnTasklist .btn{
+        font-size: 18px;
+        padding: 12px 15px;
+    }
+
+    .head-task input[type="checkbox"]{
+        height: 20px;
+        width: 20px;
+        border: 2px solid #fff;
+        border-radius: 5px;
+        margin: auto 2rem;
+    }
+
+    .head-task input[type="checkbox"]:after{
+        font-size: 15px;
+    }
+    .head-task h2{
+        font-size: 18px;
+    }
+
+    .duedate i{
+        font-size: 1.5rem;
+    }
+    .duedate p{
+        font-size: 16px;
+    }
+    .btn-edit i{
+        font-size: 1.5rem;
+    }
+    .btn-edit p{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    .dropdown-content {
+        min-width: 100px;
+    }
+      
+    .dropdown-content button{
+        min-width: 100px;
+        padding: 8px 0;
+    }
+    .task{
+        height: 40px;
+    }
+    .head-task{
+        width: auto;
+    }
+    .btn-incontent button{
+        width: 100px;
+        height: 40px;
+        font-size: 15px;
+        margin-right: 5px;
+    }
+
+    .btn-fnTasklist .btn{
+        font-size: 15px;
+        padding: 8px 10px;
+        margin-left: 5px;
+        margin-right: 0;
+    }
+    .head-task input[type="checkbox"]{
+        height: 15px;
+        width: 15px;
+        border: 2px solid #fff;
+        border-radius: 3px;
+        margin: auto 2rem;
+    }
+
+    .head-task input[type="checkbox"]:after{
+        font-size: 10px;
+    }
+    .head-task h2{
+        font-size: 14px;
+    }
+
+    .duedate i{
+        font-size: 1.2rem;
+    }
+    .duedate p{
+        font-size: 13px;
+    }
+    .btn-edit i{
+        font-size: 1.2rem;
+    }
+    .btn-edit p{
+        font-size: 13px;
+    }
+    .showdetail{
+        height: 65px;
+    }
+    .showdetail h3{
+        font-size: 9px;
+    }
+    
+    .showdetail p{
+        font-size: 9px;
+    }
+
+
+}
+
+
+
+@media (max-width: 515px) {
+    /* header menu */
+    
+    .header{
+        padding-top: 5px;
+    }
+    .header img{
+        width: 50px;
+        height: 50px;
+    }
+
+    .header h1{
+        font-size: 24px;
+    }
+
+    .openMenu i{
+        font-size: 2rem;
+    }
+    .openMenu.open i{
+        width: 17.5px;
+        height: 20px;
+    }
+    .nav-list{
+        width: 50px;
+        height: 150px;
+        padding: 20px 10px;
+
+    }
+    .nav-list a{
+        margin: 0 0 1.5rem 0;
+    }
+    .nav-list a i{
+        font-size: 1.5rem;
+    }
+    /*  */
+    .dropdown-content {
+        min-width: 75px;
+    }
+      
+    .dropdown-content button{
+        min-width: 75px;
+        padding: 0 0;
+    }
+    .task{
+        height: 30px;
+    }
+    .btn-incontent button{
+        width: 70px;
+        height: 25px;
+        font-size: 11px;
+        margin-right: 1.5px;
+    }
+
+    .btn-fnTasklist .btn{
+        font-size: 11px;
+        padding: 5px 7px;
+        margin-left: 1.5px;
+        margin-right: 0;
+    }
+
+    .btn-fnTasklist .btn i{
+        font-size: 10px;
+        margin-right: 5px;
+    }
+
+    .head-task input[type="checkbox"]{
+        height: 10px;
+        width: 10px;
+        border: 2px solid #fff;
+        border-radius: 2px;
+        margin: auto 1rem;
+    }
+
+    .head-task input[type="checkbox"]:after{
+        font-size: 7px;
+    }
+
+    .head-task h2{
+        font-size: 11px;
+    }
+
+    .duedate{
+        margin: auto auto;
+    }
+    .duedate i{
+        font-size: 1rem;
+    }
+
+    .duedate p{
+        font-size: 10px;
+    }
+
+    .btn-edit i{
+        font-size: 1rem;
+    }
+
+    .btn-edit p{
+        font-size: 10px;
+    }
+    .showdetail{
+        height: 50px;
+    }
+    .showdetail h3{
+        font-size: 7px;
+    }
+    
+    .showdetail p{
+        font-size: 7px;
+        text-indent: 20px;
+    }
+}
+@media (max-width: 414px) {
+    .header{
+        padding: 0 2rem;
+    }
+    .openMenu{
+        margin-top: 1rem;
+    }
+    .nav-list.open{
+        margin-right: 2rem;
+    }
+
+}
+@media (max-width: 400px){
+    .head-task{
+        width: auto;
+    }
+    .head-task input[type="checkbox"]{
+        height: 8px;
+        width: 8px;
+        border: 2px solid #fff;
+        border-radius: 2px;
+        margin: auto 1rem;
+    }
+
+    .head-task input[type="checkbox"]:after{
+        font-size: 5px;
+    }
+
+    .head-task h2{
+        font-size: 10px;
+    }
+
+    .duedate{
+        margin: auto auto;
+    }
+    .duedate i{
+        font-size: 0.8rem;
+        margin-right: 0.5rem;
+    }
+
+    .duedate p{
+        font-size: 9px;
+    }
+
+    .btn-edit i{
+        font-size: 0.8rem;
+    }
+
+    .btn-edit p{
+        font-size: 9px;
+    }
+    .showdetail{
+        height: 45px;
+    }
+    .showdetail h3{
+        font-size: 6px;
+    }
+    
+    .showdetail p{
+        font-size: 6px;
+        text-indent: 10px;
+    }
+}
+@media (max-width: 350px){
+    .dropdown-content {
+        min-width: 55px;
+    }
+      
+    .dropdown-content button{
+        min-width: 55px;
+    }
+    .btn-incontent button{
+        width: 50px;
+        height: 17px;
+        font-size: 9px;
+        margin-right: 1.5px;
+    }
+
+    .btn-fnTasklist .btn{
+        font-size: 9px;
+        padding: 2.5px 4px;
+        margin-left: 1.5px;
+        margin-right: 0;
+        border-radius: 2px;
+    }
+
+    .btn-fnTasklist .btn i{
+        font-size: 7px;
+        margin-right: 5px;
+    }
+    .head-task input[type="checkbox"]{
+        height: 7px;
+        width: 7px;
+        margin: auto 0.5rem auto 1rem;
+    }
+
+    .head-task input[type="checkbox"]:after{
+        font-size: 5px;
+    }
+
+    .head-task h2{
+        font-size: 9px;
+    }
+
+    .duedate{
+        margin: auto;
+        
+    }
+    .duedate i{
+        font-size: 0.5rem;
+        margin-right: 0.4rem;
+        margin-left: 0;
+    }
+
+    .duedate p{
+        font-size: 8px;
+    }
+
+    .btn-edit i{
+        font-size: 0.5rem;
+    }
+
+    .btn-edit p{
+        font-size: 8px;
+    }
+    .showdetail{
+        height: 35px;
+    }
+    .showdetail h3{
+        font-size: 5px;
+    }
+    
+    .showdetail p{
+        font-size: 5px;
+        text-indent: 5px;
+        margin: 0 1rem;
+    }
+}
+@media (max-width: 340px){
+    /* header menu */
+    .header img{
+        width: 30px;
+        height: 30px;
+    }
+
+    .header h1{
+        font-size: 18px;
+    }
+
+    .openMenu i{
+        font-size: 1.5rem;
+    }
+    .openMenu.open i{
+        width: 13.13px;
+        height: 18px;
+    }
+    .head-task h2{
+        font-size: 7px;
+    }
+    .duedate{
+        margin: auto;
+        
+    }
+    .duedate i{
+        font-size: 0.5rem;
+        margin-right: 0.4rem;
+        margin-left: 0;
+    }
+
+    .duedate p{
+        font-size: 6px;
+    }
+
+    .btn-edit i{
+        font-size: 0.5rem;
+    }
+
+    .btn-edit p{
+        font-size: 6px;
+    }
+
+    .showdetail{
+        height: 25px;
+    }
+    .showdetail h3{
+        font-size: 4px;
+    }
+    
+    .showdetail p{
+        font-size: 4px;
+        text-indent: 4px;
+        margin: 0 1rem;
+    }
+}
+
+@media (max-width: 270px){
+    /* header menu */
+    .header img{
+        width: 30px;
+        height: 30px;
+    }
+
+    .header h1{
+        font-size: 16px;
+    }
+
+    .openMenu i{
+        font-size: 1.2rem;
+    }
+    .openMenu.open i{
+        width: 10.5px;
+        height: 12px;
+    }
+
+    .nav-list{
+        width: 30px;
+        height: 100px;
+        padding: 5px 5px;
+
+    }
+    .nav-list a{
+        margin: 0 0 1rem 0;
+    }
+    .nav-list a i{
+        font-size: 1rem;
+    }
+}
